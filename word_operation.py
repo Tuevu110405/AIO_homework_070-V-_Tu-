@@ -95,7 +95,7 @@ def exercise1():
 
 def exercise2():
     str2 = input('Nhập chuỗi bạn muốn đếm số lượng kí tự: ')
-    print(count_chars(str))
+    print(count_chars(str2))
 
 
 def exercise3():
