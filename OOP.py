@@ -127,10 +127,13 @@ class MyStack:
         return False
     
     def pop(self):
-        a= self.list[len(self.list)- 1]
-        self.list.pop(a)
-        return a
-    
+        if self.is_empty():
+            print("stack is empty")
+        else:
+            a= self.list[len(self.list)- 1]
+            self.list.pop(a)
+            return a
+        
     def push(self, a):
         if not self.is_full():
             self.list.append(a)
@@ -138,8 +141,10 @@ class MyStack:
             print("Cannot push more")
     
     def top(self):
-        return self.list[len(self.list)- 1]
-
+        if self.is_empty():
+            print("stack is empty")
+        else:
+            return self.list[len(self.list)- 1]
 
 #Task 4
 class MyQueue:
@@ -158,7 +163,10 @@ class MyQueue:
         return False
     
     def front(self):
-        return self.list[0]
+        if self.is_empty():
+            print("Queue is empty")
+        else:
+            return self.list[0]
     
     def enqueue(self, a):
         
@@ -168,9 +176,13 @@ class MyQueue:
             print("Cannot enqueue more")
     
     def dequeue(self):
-        a = self.list[0]
-        self.list.pop(0)
-        return a
+        if self.is_empty():
+            print("Queue is empty")
+        else:
+            a = self.list[0]
+            self.list.pop(0)
+            return a
+
 
 
 
